@@ -1,0 +1,111 @@
+Welcome to DrJava.  Working directory is /Users/John/Desktop/Syracuse/CIS 351/Homework 12
+> run GraphTricks
+Graph written to g0.gv
+Vert	Pre	Post	Parent
+0	1	18	-1
+1	2	17	0
+2	3	16	1
+3	4	15	2
+4	5	10	3
+5	6	9	4
+6	7	8	5
+7	12	13	8
+8	11	14	3
+*** isSource tests ***
+  isSource(g1,0) = false	Check
+  isSource(g1,1) = true	Check
+  isSource(g1,2) = false	Check
+  isSource(g1,3) = false	Check
+  isSource(g1,4) = false	Check
+  isSource(g1,5) = false	Check
+  isSource(g1,6) = false	Check
+  isSource(g1,7) = false	Check
+  isSource(g1,8) = false	Check
+  isSource(g5,0) = true	WRONG  isSource(g5,1) = true	WRONG  isSource(g5,2) = false	Check  isSource(g5,3) = false	Check
+
+*** Shortest paths tests ***
+  For graph g0
+  Claimed shortest paths from start 1
+  to 0:	[1, 2, 8, 0]
+  to 1:	[1]
+  to 2:	[1, 2]
+  to 3:	[1, 2, 3]
+  to 4:	[1, 2, 4]
+  to 5:	[1, 2, 4, 5]
+  to 6:	[1, 6]
+  to 7:	[1, 2, 8, 7]
+  to 8:	[1, 2, 8]
+
+  For graph g1
+  Claimed shortest paths from start 2
+  to 0:	[2, 8, 0]
+  to 1:	[]
+  to 2:	[2]
+  to 3:	[2, 3]
+  to 4:	[2, 4]
+  to 5:	[2, 4, 5]
+  to 6:	[2, 4, 6]
+  to 7:	[2, 8, 7]
+  to 8:	[2, 8]
+
+  For graph g2
+  Claimed shortest paths from start 0
+  to 0:	[0]
+  to 1:	[0, 5, 12, 9, 10, 13, 1]
+  to 2:	[0, 5, 12, 9, 10, 13, 1, 2]
+  to 3:	[]
+  to 4:	[0, 4]
+  to 5:	[0, 5]
+  to 6:	[0, 5, 12, 9, 10, 13, 1, 2, 6]
+  to 7:	[0, 4, 7]
+  to 8:	[0, 5, 8]
+  to 9:	[0, 5, 12, 9]
+  to 10:	[0, 5, 12, 9, 10]
+  to 11:	[0, 11]
+  to 12:	[0, 5, 12]
+  to 13:	[0, 5, 12, 9, 10, 13]
+
+  For graph g3
+  Claimed shortest paths from start 1
+  to 0:	[]
+  to 1:	[1]
+  to 2:	[1, 2]
+  to 3:	[]
+  to 4:	[1, 4]
+  to 5:	[1, 2, 5]
+  to 6:	[1, 2, 6]
+  to 7:	[1, 4, 7]
+  to 8:	[1, 8]
+  to 9:	[1, 2, 9]
+  to 10:	[1, 2, 9, 10]
+  to 11:	[1, 2, 9, 11]
+  to 12:	[1, 2, 5, 12]
+  to 13:	[1, 2, 9, 10, 13]
+
+
+*** Cycle finding tests ***
+  For graph g0
+  The claimed cycle is: [0, 1, 2, 3, 8, 0]
+  The cycle checks out.
+
+  For graph g1
+  No cycle found, which is correct for this graph
+
+  For graph g2
+  The claimed cycle is: [9, 10, 13, 1, 2, 9]
+  The cycle checks out.
+
+  For graph g3
+  No cycle found, which is correct for this graph
+
+
+*** Topological sort tests ***
+
+  For graph g1
+  The claimed topological sort is: [1, 2, 3, 8, 0, 7, 4, 5, 6]
+  The topological sort checks out.
+
+  For graph g3
+  The claimed topological sort is: [0, 3, 1, 4, 2, 6, 5, 8, 12, 7, 9, 11, 10, 13]
+  The topological sort checks out.
+> 

@@ -1,0 +1,53 @@
+Welcome to DrJava.  Working directory is /Users/John/Desktop/CIS 351/Homework 8
+> run Test8
+
+**TESTING add**
+
+ Testing: lst.add(owl) = [owl]
+	CHECK!
+ Testing: lst.add(gnu) = [gnu, owl]
+	CHECK!
+ Testing: lst.add(yak) = [gnu, owl, yak]
+	CHECK!
+ Testing: lst.add(bee) = [bee, gnu, owl, yak]
+	CHECK!
+ Testing: lst.add(cat) = [bee, cat, gnu, owl, yak]
+	CHECK!
+ Testing: lst.add(eel) = [bee, cat, eel, gnu, owl, yak]
+	CHECK!
+ Testing: lst.add(dog) = [bee, cat, dog, eel, gnu, owl, yak]
+	CHECK!
+ Testing: lst.add(cow) = [bee, cat, cow, dog, eel, gnu, owl, yak]
+	CHECK!
+ Testing: lst.add(rat) = [bee, cat, cow, dog, eel, gnu, owl, rat, yak]
+	CHECK!
+ Testing: lst.add(ram) = [bee, cat, cow, dog, eel, gnu, owl, ram, rat, yak]
+	CHECK!
+
+**TESTING neighbors**
+
+ Testing: lst.neighbors(gnu) = []
+	CHECK!
+ Testing: lst.neighbors(ant) = [bee]
+	CHECK!
+ Testing: lst.neighbors(bee) = [bee, cat]
+	CHECK!
+ Testing: lst.neighbors(zebra) = [yak]
+	CHECK!
+ Testing: lst.neighbors(yak) = [rat, yak]
+	CHECK!
+ Testing: lst.neighbors(eel) = [dog, eel, gnu]
+	CHECK!
+ Testing: lst.neighbors(ewe) = [eel, gnu]
+	CHECK!
+
+**Building concordence**
+
+java.lang.NullPointerException
+	at Test8.main(Test8.java:113)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at edu.rice.cs.drjava.model.compiler.JavacCompiler.runCommand(JavacCompiler.java:272)
+> 

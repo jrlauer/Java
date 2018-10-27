@@ -1,0 +1,291 @@
+
+TESTS OF THE ArrayStack CLASS
+
+**1** Running tests for contains
+  a contains 0
+  a doesn't contain 1
+  a contains 2
+  a doesn't contain 3
+  a contains 4
+  a doesn't contain 5
+  a contains 6
+  a doesn't contain 7
+  a contains 8
+  a doesn't contain 9
+  a contains 10
+
+**2** Running tests for count
+  a.count(0) = 1
+  a.count(1) = 0
+  a.count(2) = 2
+  a.count(3) = 0
+  a.count(4) = 1
+  a.count(5) = 0
+  a.count(6) = 5
+  a.count(7) = 0
+  a.count(8) = 2
+  a.count(9) = 0
+  a.count(10) = 2
+
+**3** Running tests for delete
+  a.count(0) = 0
+  a.count(1) = 0
+  a.count(2) = 1
+  a.count(3) = 0
+  a.count(4) = 0
+  a.count(5) = 0
+  a.count(6) = 4
+  a.count(7) = 0
+  a.count(8) = 1
+  a.count(9) = 0
+  a.count(10) = 1
+
+**4** Running tests for drop
+  Checking a0.drop(0)	 Passed
+  Checking a0.drop(4)	 Passed
+  Checking a0.drop(2)	 Passed
+  Checking a0.drop(5)	 Passed
+  Checking a0.drop(5)	 Passed
+
+**5** Running tests for locationOf
+  Checking as.locationsOf(1)	 Passed
+  Checking as.locationsOf(2)	 Passed
+  Checking as.locationsOf(3)	 Passed
+  Checking as.locationsOf(4)	 Passed
+  Checking as.locationsOf(5)	 Passed
+  Checking as.locationsOf(6)	 Passed
+  Checking as.locationsOf(7)	 Passed
+  Checking as.locationsOf(8)	 Passed
+  Checking as.locationsOf(9)	 Passed
+
+
+TESTS OF THE TimeSeries CLASS
+
+**6** Running tests for timesAbove
+  Checking ts1.timesAbove(i,0,6) for i=0,...,9
+  Checking ts1.timesAbove(i,1,4) for i=0,...,9
+  Testing timesAbove's execeptions
+	PROBLEM: ts1.timesAbove(0,1,4) = 2 but should be 4
+	PROBLEM: ts1.timesAbove(1,1,4) = 1 but should be 4
+	PROBLEM: ts1.timesAbove(2,1,4) = 1 but should be 3
+	PROBLEM: ts1.timesAbove(3,1,4) = 1 but should be 2
+	PROBLEM: ts1.timesAbove(4,1,4) = 1 but should be 2
+	PROBLEM: ts1.timesAbove(7,1,4) = 1 but should be 0
+	PROBLEM: ts1.timesAbove(8,1,4) = 1 but should be 0
+	PROBLEM: ts1.timesAbove(0,1,4) = 0 but should be 4
+	PROBLEM: ts1.timesAbove(1,1,4) = 0 but should be 4
+	PROBLEM: ts1.timesAbove(2,1,4) = 0 but should be 3
+	PROBLEM: ts1.timesAbove(3,1,4) = 0 but should be 2
+	PROBLEM: ts1.timesAbove(4,1,4) = 0 but should be 2
+	PROBLEM: ts1.timesAbove(5,1,4) = 0 but should be 1
+	PROBLEM: ts1.timesAbove(6,1,4) = 0 but should be 1
+
+**7** Running tests for oscillation
+  Checking ts2.oscillation(i,tst2.length()-1) for i=0,...,tst2.length()-1 
+	PROBLEM: ts2.oscillation(0,tst2.length()-1) = 99994 but should be 88
+	PROBLEM: ts2.oscillation(1,tst2.length()-1) = 99989 but should be 83
+	PROBLEM: ts2.oscillation(2,tst2.length()-1) = 99989 but should be 83
+	PROBLEM: ts2.oscillation(3,tst2.length()-1) = 99988 but should be 82
+	PROBLEM: ts2.oscillation(4,tst2.length()-1) = 99968 but should be 62
+	PROBLEM: ts2.oscillation(5,tst2.length()-1) = 99968 but should be 62
+	PROBLEM: ts2.oscillation(6,tst2.length()-1) = 99968 but should be 62
+	PROBLEM: ts2.oscillation(7,tst2.length()-1) = 99968 but should be 62
+	PROBLEM: ts2.oscillation(8,tst2.length()-1) = 99968 but should be 62
+	PROBLEM: ts2.oscillation(9,tst2.length()-1) = 99968 but should be 62
+	PROBLEM: ts2.oscillation(10,tst2.length()-1) = 99968 but should be 62
+	PROBLEM: ts2.oscillation(11,tst2.length()-1) = 99968 but should be 62
+	PROBLEM: ts2.oscillation(12,tst2.length()-1) = 99968 but should be 53
+	PROBLEM: ts2.oscillation(13,tst2.length()-1) = 99968 but should be 53
+	PROBLEM: ts2.oscillation(14,tst2.length()-1) = 99968 but should be 53
+	PROBLEM: ts2.oscillation(15,tst2.length()-1) = 99968 but should be 53
+	PROBLEM: ts2.oscillation(16,tst2.length()-1) = 99968 but should be 34
+	PROBLEM: ts2.oscillation(17,tst2.length()-1) = 99958 but should be 24
+	PROBLEM: ts2.oscillation(18,tst2.length()-1) = 99934 but should be 0
+  Checking ts2.oscillation(0,i) for i=0,...,tst2.length()-1 
+	PROBLEM: ts2.oscillation(0,0) = 99994 but should be 0
+	PROBLEM: ts2.oscillation(0,1) = 99994 but should be 62
+	PROBLEM: ts2.oscillation(0,2) = 99994 but should be 62
+	PROBLEM: ts2.oscillation(0,3) = 99994 but should be 62
+	PROBLEM: ts2.oscillation(0,4) = 99994 but should be 62
+	PROBLEM: ts2.oscillation(0,5) = 99994 but should be 62
+	PROBLEM: ts2.oscillation(0,6) = 99994 but should be 69
+	PROBLEM: ts2.oscillation(0,7) = 99994 but should be 69
+	PROBLEM: ts2.oscillation(0,8) = 99994 but should be 69
+	PROBLEM: ts2.oscillation(0,9) = 99994 but should be 72
+	PROBLEM: ts2.oscillation(0,10) = 99994 but should be 85
+	PROBLEM: ts2.oscillation(0,11) = 99994 but should be 88
+	PROBLEM: ts2.oscillation(0,12) = 99994 but should be 88
+	PROBLEM: ts2.oscillation(0,13) = 99994 but should be 88
+	PROBLEM: ts2.oscillation(0,14) = 99994 but should be 88
+	PROBLEM: ts2.oscillation(0,15) = 99994 but should be 88
+	PROBLEM: ts2.oscillation(0,16) = 99994 but should be 88
+	PROBLEM: ts2.oscillation(0,17) = 99994 but should be 88
+	PROBLEM: ts2.oscillation(0,18) = 99994 but should be 88
+  Testing oscillation's execeptions
+	PROBLEM: ts2.oscillation(0,0) = 99994 but should be 0
+	PROBLEM: ts2.oscillation(0,1) = 99994 but should be 62
+	PROBLEM: ts2.oscillation(0,2) = 99994 but should be 62
+	PROBLEM: ts2.oscillation(0,3) = 99994 but should be 62
+	PROBLEM: ts2.oscillation(0,4) = 99994 but should be 62
+	PROBLEM: ts2.oscillation(0,5) = 99994 but should be 62
+	PROBLEM: ts2.oscillation(0,6) = 99994 but should be 69
+	PROBLEM: ts2.oscillation(0,7) = 99994 but should be 69
+	PROBLEM: ts2.oscillation(0,8) = 99994 but should be 69
+	PROBLEM: ts2.oscillation(0,9) = 99994 but should be 72
+	PROBLEM: ts2.oscillation(0,10) = 99994 but should be 85
+	PROBLEM: ts2.oscillation(0,11) = 99994 but should be 88
+	PROBLEM: ts2.oscillation(0,12) = 99994 but should be 88
+	PROBLEM: ts2.oscillation(0,13) = 99994 but should be 88
+	PROBLEM: ts2.oscillation(0,14) = 99994 but should be 88
+	PROBLEM: ts2.oscillation(0,15) = 99994 but should be 88
+	PROBLEM: ts2.oscillation(0,16) = 99994 but should be 88
+	PROBLEM: ts2.oscillation(0,17) = 99994 but should be 88
+	PROBLEM: ts2.oscillation(0,18) = 99994 but should be 88
+	PROBLEM: ts2.oscillation(0,0) = -900000 but should be 0
+	PROBLEM: ts2.oscillation(0,1) = -900000 but should be 62
+	PROBLEM: ts2.oscillation(0,2) = -900000 but should be 62
+	PROBLEM: ts2.oscillation(0,3) = -900000 but should be 62
+	PROBLEM: ts2.oscillation(0,4) = -900000 but should be 62
+	PROBLEM: ts2.oscillation(0,5) = -900000 but should be 62
+	PROBLEM: ts2.oscillation(0,6) = -900000 but should be 69
+	PROBLEM: ts2.oscillation(0,7) = -900000 but should be 69
+	PROBLEM: ts2.oscillation(0,8) = -900000 but should be 69
+	PROBLEM: ts2.oscillation(0,9) = -900000 but should be 72
+	PROBLEM: ts2.oscillation(0,10) = -900000 but should be 85
+	PROBLEM: ts2.oscillation(0,11) = -900000 but should be 88
+	PROBLEM: ts2.oscillation(0,12) = -900000 but should be 88
+	PROBLEM: ts2.oscillation(0,13) = -900000 but should be 88
+	PROBLEM: ts2.oscillation(0,14) = -900000 but should be 88
+	PROBLEM: ts2.oscillation(0,15) = -900000 but should be 88
+	PROBLEM: ts2.oscillation(0,16) = -900000 but should be 88
+	PROBLEM: ts2.oscillation(0,17) = -900000 but should be 88
+	PROBLEM: ts2.oscillation(0,18) = -900000 but should be 88
+
+**8** Running tests for runningAvg
+  Checking ts2.runningAvg(1)
+  Checking ts2.runningAvg(2)
+  Checking ts2.runningAvg(3)
+  Checking ts2.runningAvg(4)
+  Checking ts2.runningAvg(5)
+  Checking ts2.runningAvg(6)
+  Checking ts2.runningAvg(7)
+  Checking ts2.runningAvg(8)
+  Checking ts2.runningAvg(9)
+  Checking ts2.runningAvg(10)
+  Checking ts2.runningAvg(11)
+  Checking ts2.runningAvg(12)
+  Checking ts2.runningAvg(13)
+  Checking ts2.runningAvg(14)
+  Checking ts2.runningAvg(15)
+  Checking ts2.runningAvg(16)
+  Checking ts2.runningAvg(17)
+  Checking ts2.runningAvg(18)
+  Testing runningAvg's execeptions
+  Checking ts2.runningAvg(100)
+	 PROBLEM: ts2.runningAvg(100) = []
+		 but should be [6, 68, 11, 12, 58, 41, 75, 73, 70, 78, 91, 94, 77, 54, 53, 85, 32, 42]
+  Checking ts2.runningAvg(101)
+	 PROBLEM: ts2.runningAvg(101) = []
+		 but should be [37, 39, 11, 35, 49, 58, 74, 71, 74, 84, 92, 85, 65, 53, 69, 58, 37]
+  Checking ts2.runningAvg(102)
+	 PROBLEM: ts2.runningAvg(102) = []
+		 but should be [28, 30, 27, 37, 58, 63, 72, 73, 79, 87, 87, 75, 61, 64, 56, 53]
+  Checking ts2.runningAvg(103)
+	 PROBLEM: ts2.runningAvg(103) = []
+		 but should be [24, 37, 30, 46, 61, 64, 74, 78, 83, 85, 79, 69, 67, 56, 53]
+  Checking ts2.runningAvg(104)
+	 PROBLEM: ts2.runningAvg(104) = []
+		 but should be [31, 38, 39, 51, 63, 67, 77, 81, 82, 78, 73, 72, 60, 53]
+  Checking ts2.runningAvg(105)
+	 PROBLEM: ts2.runningAvg(105) = []
+		 but should be [32, 44, 45, 54, 65, 71, 80, 80, 77, 74, 75, 65, 57]
+  Checking ts2.runningAvg(106)
+	 PROBLEM: ts2.runningAvg(106) = []
+		 but should be [38, 48, 48, 58, 69, 74, 79, 76, 73, 76, 69, 62]
+  Checking ts2.runningAvg(107)
+	 PROBLEM: ts2.runningAvg(107) = []
+		 but should be [43, 51, 52, 62, 72, 74, 76, 73, 75, 70, 66]
+  Checking ts2.runningAvg(108)
+	 PROBLEM: ts2.runningAvg(108) = []
+		 but should be [46, 54, 56, 65, 73, 72, 73, 75, 70, 67]
+  Checking ts2.runningAvg(109)
+	 PROBLEM: ts2.runningAvg(109) = []
+		 but should be [49, 57, 60, 66, 71, 70, 75, 70, 67]
+  Checking ts2.runningAvg(110)
+	 PROBLEM: ts2.runningAvg(110) = []
+		 but should be [53, 61, 61, 65, 69, 71, 71, 68]
+  Checking ts2.runningAvg(111)
+	 PROBLEM: ts2.runningAvg(111) = []
+		 but should be [56, 62, 61, 64, 70, 68, 68]
+  Checking ts2.runningAvg(112)
+	 PROBLEM: ts2.runningAvg(112) = []
+		 but should be [58, 61, 60, 66, 67, 66]
+  Checking ts2.runningAvg(113)
+	 PROBLEM: ts2.runningAvg(113) = []
+		 but should be [57, 61, 62, 63, 65]
+  Checking ts2.runningAvg(114)
+	 PROBLEM: ts2.runningAvg(114) = []
+		 but should be [57, 62, 60, 62]
+  Checking ts2.runningAvg(115)
+	 PROBLEM: ts2.runningAvg(115) = []
+		 but should be [59, 60, 59]
+  Checking ts2.runningAvg(116)
+	 PROBLEM: ts2.runningAvg(116) = []
+		 but should be [57, 59]
+  Checking ts2.runningAvg(117)
+	 PROBLEM: ts2.runningAvg(117) = []
+		 but should be [56]
+  Checking ts2.runningAvg(-100)
+	 PROBLEM: ts2.runningAvg(-100) = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+		 but should be [6, 68, 11, 12, 58, 41, 75, 73, 70, 78, 91, 94, 77, 54, 53, 85, 32, 42]
+  Checking ts2.runningAvg(-99)
+	 PROBLEM: ts2.runningAvg(-99) = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+		 but should be [37, 39, 11, 35, 49, 58, 74, 71, 74, 84, 92, 85, 65, 53, 69, 58, 37]
+  Checking ts2.runningAvg(-98)
+	 PROBLEM: ts2.runningAvg(-98) = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+		 but should be [28, 30, 27, 37, 58, 63, 72, 73, 79, 87, 87, 75, 61, 64, 56, 53]
+  Checking ts2.runningAvg(-97)
+	 PROBLEM: ts2.runningAvg(-97) = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+		 but should be [24, 37, 30, 46, 61, 64, 74, 78, 83, 85, 79, 69, 67, 56, 53]
+  Checking ts2.runningAvg(-96)
+	 PROBLEM: ts2.runningAvg(-96) = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+		 but should be [31, 38, 39, 51, 63, 67, 77, 81, 82, 78, 73, 72, 60, 53]
+  Checking ts2.runningAvg(-95)
+	 PROBLEM: ts2.runningAvg(-95) = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+		 but should be [32, 44, 45, 54, 65, 71, 80, 80, 77, 74, 75, 65, 57]
+  Checking ts2.runningAvg(-94)
+	 PROBLEM: ts2.runningAvg(-94) = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+		 but should be [38, 48, 48, 58, 69, 74, 79, 76, 73, 76, 69, 62]
+  Checking ts2.runningAvg(-93)
+	 PROBLEM: ts2.runningAvg(-93) = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+		 but should be [43, 51, 52, 62, 72, 74, 76, 73, 75, 70, 66]
+  Checking ts2.runningAvg(-92)
+	 PROBLEM: ts2.runningAvg(-92) = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+		 but should be [46, 54, 56, 65, 73, 72, 73, 75, 70, 67]
+  Checking ts2.runningAvg(-91)
+	 PROBLEM: ts2.runningAvg(-91) = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+		 but should be [49, 57, 60, 66, 71, 70, 75, 70, 67]
+  Checking ts2.runningAvg(-90)
+	 PROBLEM: ts2.runningAvg(-90) = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+		 but should be [53, 61, 61, 65, 69, 71, 71, 68]
+  Checking ts2.runningAvg(-89)
+	 PROBLEM: ts2.runningAvg(-89) = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+		 but should be [56, 62, 61, 64, 70, 68, 68]
+  Checking ts2.runningAvg(-88)
+	 PROBLEM: ts2.runningAvg(-88) = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+		 but should be [58, 61, 60, 66, 67, 66]
+  Checking ts2.runningAvg(-87)
+	 PROBLEM: ts2.runningAvg(-87) = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+		 but should be [57, 61, 62, 63, 65]
+  Checking ts2.runningAvg(-86)
+	 PROBLEM: ts2.runningAvg(-86) = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+		 but should be [57, 62, 60, 62]
+  Checking ts2.runningAvg(-85)
+	 PROBLEM: ts2.runningAvg(-85) = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+		 but should be [59, 60, 59]
+  Checking ts2.runningAvg(-84)
+	 PROBLEM: ts2.runningAvg(-84) = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+		 but should be [57, 59]
+  Checking ts2.runningAvg(-83)
+	 PROBLEM: ts2.runningAvg(-83) = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+		 but should be [56]

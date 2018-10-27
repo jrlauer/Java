@@ -1,0 +1,63 @@
+Welcome to DrJava.  Working directory is /Users/John/Desktop/Syracuse/CIS 351/Homework 11
+> run Splaytree
+Before Zig (Demonstration)
+      --
+   7
+      --
+6
+      --
+   5
+      --
+-------------------------------
+After splaying on '5'(Zig):
+         --
+      7
+         --
+   6
+      --
+5
+   --
+-------------------------------
+Zag demonstration, before:
+      --
+   r
+      --
+q
+      --
+   p
+      --
+-------------------------------
+After splaying on 'p':
+   --
+r
+      --
+   q
+         --
+      p
+         --
+-------------------------------
+-------------------------------
+Zagzag demonstration, before:
+         --
+      z
+         --
+   y
+      --
+x
+      --
+   w
+      --
+-------------------------------
+After splaying on 't':
+   --
+z
+      --
+   x
+         --
+      y
+            --
+         w
+            --
+-------------------------------
+-------------------------------
+> 
